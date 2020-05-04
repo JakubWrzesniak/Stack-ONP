@@ -17,7 +17,7 @@ public class ArrayStack<E> implements IStack<E> {
     @Override
     public void push(E value) throws FullStackException {
         if(usedCapacity == size()) throw new FullStackException();
-        stack[++usedCapacity] = value;
+        stack[usedCapacity++] = value;
     }
 
     @Override
